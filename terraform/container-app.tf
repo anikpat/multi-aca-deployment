@@ -51,24 +51,6 @@ resource "azapi_resource" "aca" {
                   }
                 ]
               }
-            },
-            {
-              name   = "azure-service-bus-topic-rule"
-              custom = {
-                type     = "azure-servicebus"
-                metadata = {
-                  topicName        = "topic"
-                  subscriptionName = "subscription"
-                  namespace        = azurerm_servicebus_namespace.service_bus.name
-                  messageCount     = "1"
-                }
-                auth = [
-                  {
-                    secretRef        = "service-bus-connection-string"
-                    triggerParameter = "connection"
-                  }
-                ]
-              }
             }
           ]
         }

@@ -14,6 +14,7 @@ variable "container_apps" {
       name = string
       type = string
       topic_name = string
+      subscription_name = string
       message_count = number
     }))
   }))
@@ -33,6 +34,7 @@ variable "container_apps" {
         name = "az-sample-rule"
         type = "azure-servicebus"
         topic_name = "sample-topic"
+        subscription_name = "sample-subject"
         message_count = 1
     }]
   },
@@ -51,6 +53,7 @@ variable "container_apps" {
         name = "az-sample-rule"
         type = "azure-servicebus"
         topic_name = "sample-topic"
+        subscription_name = "sample-subject"
         message_count = 1
       }]
     }]
