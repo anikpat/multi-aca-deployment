@@ -57,8 +57,8 @@ resource "azapi_resource" "aca" {
               custom = {
                 type     = "azure-servicebus"
                 metadata = {
-                  topicName        = "oto-user-unsubscribed"
-                  subscriptionName = "datalake-handler"
+                  topicName        = "topic"
+                  subscriptionName = "subscription"
                   namespace        = azurerm_servicebus_namespace.service_bus.name
                   messageCount     = "1"
                 }
